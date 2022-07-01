@@ -234,3 +234,20 @@ http://ionicframework.com/docs/theming/ */
     --ion-card-background: #1e1e1e;
   }
 }
+:root {
+	--ion-color-light-green: #5A8881;
+	--ion-color-light-green-rgb: 90,136,129;
+	--ion-color-light-green-contrast: #ffffff;
+	--ion-color-light-green-contrast-rgb: 255,255,255;
+	--ion-color-light-green-shade: #4f7872;
+	--ion-color-light-green-tint: #6b948e;
+}
+
+.ion-color-light-green {
+	--ion-color-base: var(--ion-color-light-green);
+	--ion-color-base-rgb: var(--ion-color-light-green-rgb);
+	--ion-color-contrast: var(--ion-color-light-green-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-light-green-contrast-rgb);
+	--ion-color-shade: var(--ion-color-light-green-shade);
+	--ion-color-tint: var(--ion-color-light-green-tint);
+}
