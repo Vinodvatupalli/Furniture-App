@@ -28,7 +28,8 @@ const SignUp: React.FC = () => {
         <IonInput className="signup-email" placeholder="Enter Email"></IonInput>
         <IonInput className="signup-password" placeholder="Enter Password"></IonInput>
         </div>
-        <IonButton className="register-btn" color="light-green" >Register</IonButton>
+        <IonButton  routerLink='/signin'
+        className="register-btn" color="light-green" >Register</IonButton>
         
           <IonLabel className="text">Already have an Account? &nbsp;<u className="signin-link">Sign In</u></IonLabel>
           <IonLabel className="or">OR</IonLabel>

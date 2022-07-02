@@ -251,3 +251,32 @@ http://ionicframework.com/docs/theming/ */
 	--ion-color-shade: var(--ion-color-light-green-shade);
 	--ion-color-tint: var(--ion-color-light-green-tint);
 }
+.searchbar-input.sc-ion-searchbar-md {
+  border-radius: 25px;
+  background-position: left 8px center;
+  height: auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #7f8490;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1) !important;
+}
+
+:root {
+	--ion-color-dark-ash: #999E9D;
+	--ion-color-dark-ash-rgb: 153,158,157;
+	--ion-color-dark-ash-contrast: #000000;
+	--ion-color-dark-ash-contrast-rgb: 0,0,0;
+	--ion-color-dark-ash-shade: #878b8a;
+	--ion-color-dark-ash-tint: #a3a8a7;
+}
+
+.ion-color-dark-ash {
+	--ion-color-base: var(--ion-color-dark-ash);
+	--ion-color-base-rgb: var(--ion-color-dark-ash-rgb);
+	--ion-color-contrast: var(--ion-color-dark-ash-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-dark-ash-contrast-rgb);
+	--ion-color-shade: var(--ion-color-dark-ash-shade);
+	--ion-color-tint: var(--ion-color-dark-ash-tint);
+}

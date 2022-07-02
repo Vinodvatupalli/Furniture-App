@@ -1,0 +1,167 @@
+.content{
+    --background: linear-gradient(#C4C4C4, #C4C4C4);
+}
+
+
+.dashboard-intro{
+position: absolute;
+width: 229px;
+height: 66px;
+left: 29px;
+top: 67px;
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+
+color: #1E3C1E;
+}
+.back{
+    position: absolute;
+     left:10px;
+    /* right: 87.39%;
+    top:60px;  */
+     /* bottom: 93.91%;  */
+}
+.search-dashboard{
+  top:180px;
+  border-radius: 30px;
+   position: absolute;
+width: 260px;
+ height: 30px; 
+left: 31px;
+
+
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+/* line-height: 22px; */
+
+color: #AEBAB8;    
+}
+.cat{
+    position: absolute;
+width: 125px;
+height: 33px;
+left: 29px;
+top: 230px;
+
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+
+color: #1E3C1E;
+
+}
+.categories{
+    position: absolute;
+    width: 288px;
+    height: 50px;
+    left: -25px;
+    top: -59px;
+
+}
+
+#btn1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+
+    
+    position: absolute;
+    width: 94px;
+    height: 46px;
+    left: 27px;
+    top: 347px;
+    
+    background: #999E9D;
+    border-radius: 15px;
+    font-family: Noto serif;
+}
+#btn2{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+
+
+position: absolute;
+width: 94px;
+height: 46px;
+left: 132px;
+top: 348px;
+
+background: #999E9D;
+border-radius: 15px;
+font-family: Noto serif;
+}
+#btn3{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+font-family: Noto serif;
+
+
+
+position: absolute;
+width: 128px;
+height: 47px;
+left: 237px;
+top: 348px;
+
+background: #999E9D;
+border-radius: 15px;
+box-sizing: 50px;
+}
+
+#btn4{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+
+
+position: absolute;
+width: 94px;
+height: 46px;
+left: 27px;
+top: 412px;
+
+background: #999E9D;
+border-radius: 15px;
+font-family: Noto serif;
+}
+.furniture1{
+  
+    position: absolute;
+    width: 193px;
+    height: 130px;
+    left: 6px;
+    top: 497px;
+    
+    
+    border-radius: 5px;
+    
+    
+    /* Rectangle 19 */
+    
+    
+    position: absolute;
+    width: 137px;
+    height: 130px;
+    left: 14px;
+    top: 497px;
+    
+    
+}
