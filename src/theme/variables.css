@@ -266,7 +266,7 @@ http://ionicframework.com/docs/theming/ */
 :root {
 	--ion-color-dark-ash: #999E9D;
 	--ion-color-dark-ash-rgb: 153,158,157;
-	--ion-color-dark-ash-contrast: #000000;
+	--ion-color-dark-ash-contrast: #ffffff;
 	--ion-color-dark-ash-contrast-rgb: 0,0,0;
 	--ion-color-dark-ash-shade: #878b8a;
 	--ion-color-dark-ash-tint: #a3a8a7;

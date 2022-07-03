@@ -1,5 +1,5 @@
 .content{
-    --background: linear-gradient(#C4C4C4, #C4C4C4);
+    --background: linear-gradient(#E5E5E5, #E5E5E5);
 }
 
 
@@ -30,14 +30,14 @@ color: #1E3C1E;
    position: absolute;
 width: 260px;
  height: 30px; 
-left: 31px;
+left: 22px;
 
 
 font-family: 'Noto Serif';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
-/* line-height: 22px; */
+
 
 color: #AEBAB8;    
 }
@@ -59,109 +59,173 @@ line-height: 33px;
 color: #1E3C1E;
 
 }
-.categories{
-    position: absolute;
-    width: 288px;
-    height: 50px;
-    left: -25px;
-    top: -59px;
-
-}
-
 #btn1{
+
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+/* padding: 10px; */
+gap: 10px;
+
+position: absolute;
+width: 94px;
+height: 46px;
+left: 27px;
+top: 290px;
+
+background: #999E9D;
+border-radius: 15px;
+
+
+width: 65px;
+height: 27px;
+
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 27px;
+
+color: #FFFFFF;
+}
+#btn2{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  
+    /* padding: 10px; */
+    
+    position: absolute;
+    width: 94px;
+    height: 46px;
+    left: 112px;
+    top: 290px;
+    
+    background: #999E9D;
+    border-radius: 15px;
+
+    width: 64px;
+height: 27px;
+
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 27px;
+
+color: #FFFFFF;
+}
+#btn3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    /* gap: 10px; */
+    
+    position: absolute;
+    width: 128px;
+    height: 47px;
+    left: 197px;
+    top: 290px;
+    
+    background: #999E9D;
+    border-radius: 15px;
+
+    width: 100px;
+height: 27px;
+
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 27px;
+
+color: #FFFFFF;
+}
+
+#btn4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
     
     position: absolute;
     width: 94px;
     height: 46px;
     left: 27px;
-    top: 347px;
+    top: 335px;
     
     background: #999E9D;
     border-radius: 15px;
-    font-family: Noto serif;
-}
-#btn2{
-    display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
 
+    width: 43px;
+height: 27px;
 
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 27px;
 
-position: absolute;
-width: 94px;
-height: 46px;
-left: 132px;
-top: 348px;
-
-background: #999E9D;
-border-radius: 15px;
-font-family: Noto serif;
-}
-#btn3{
-    display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-font-family: Noto serif;
-
-
-
-position: absolute;
-width: 128px;
-height: 47px;
-left: 237px;
-top: 348px;
-
-background: #999E9D;
-border-radius: 15px;
-box-sizing: 50px;
-}
-
-#btn4{
-    display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-
-
-
-position: absolute;
-width: 94px;
-height: 46px;
-left: 27px;
-top: 412px;
-
-background: #999E9D;
-border-radius: 15px;
-font-family: Noto serif;
+color: #FFFFFF;
 }
 .furniture1{
   
+    position: relative;
+    width: 45vw;
+    height: 145px;
+    left: 2px;
+    /* top: 497px; */
+    border-radius: 3px;
+    
+    
+}
+.furniture2{
+    position: relative;
+    width: 45vw;
+    height: 145px;
+    left: -2px;
+    /* top: 497px; */
+    border-radius: 3px;
+}
+.cards{
+    display: flex;
+    position: relative;
+    bottom: 10vh;
+    top:322px;
+}
+.cardimag1-name{
     position: absolute;
-    width: 193px;
-    height: 130px;
-    left: 6px;
-    top: 497px;
-    
-    
-    border-radius: 5px;
-    
-    
-    /* Rectangle 19 */
-    
-    
+width: 166px;
+height: -20px;
+left: 12px;
+top: 545px;
+
+font-family: 'Noto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+/* line-height: 22px; */
+
+color: #000000;
+}
+.cardimag2-name{
     position: absolute;
-    width: 137px;
-    height: 130px;
-    left: 14px;
-    top: 497px;
+    width: 166px;
+    height: -20px;
+    left: 180px;
+    top: 545px;
     
+    font-family: 'Noto Serif';
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+.bottom-tool{
+    top:401px;
     
 }
