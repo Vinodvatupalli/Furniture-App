@@ -2,7 +2,7 @@ import { IonButton, IonCard,IonImg, IonContent, IonHeader, IonPage, IonTitle, Io
 // import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <IonPage>
       <IonContent fullscreen>

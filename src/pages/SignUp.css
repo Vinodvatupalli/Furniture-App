@@ -78,10 +78,6 @@ left: 58px;
 top: 535px;
 font-family: 'Noto Serief';
 }
-.signin-link{
-    color: blue;  
-    font-family: 'Noto Serief';
-}
 .or{
     position: absolute;
 width: 366px;
@@ -93,7 +89,21 @@ font-size: 13px;
 color: #1E3C1E;
 }
 .icons{
-    margin-top: 273px;
+    margin-top: 293px;
     margin-right: 30px;
     margin-left: 107px;
+    
+}
+
+.signin-link{
+   margin-bottom: -400px;
+   margin-right: 10px;
+   margin-left: 220px;
+   color: white;
+   padding: 9px 1px 3px 1px;
+   font-size: 10px;
+   font-family: Noto serif;
+   font-family: 'Noto Serief';
+   border-radius: 10px;
+
 }

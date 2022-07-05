@@ -69,9 +69,17 @@ left: 58px;
 top: 535px;
 font-family: 'Noto Serief';
 }
-.signup-link{
-    color: blue;  
+.signup-link{ 
     font-family: 'Noto Serief';
+    margin-bottom: -400px;
+   margin-right: 10px;
+   margin-left: 220px;
+   color: white;
+   padding: 9px 1px 3px 1px;
+   font-size: 10px;
+   font-family: Noto serif;
+   font-family: 'Noto Serief';
+   border-radius: 10px;
 }
 .or{
     position: absolute;

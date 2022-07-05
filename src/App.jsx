@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Dashboard from './pages/Dashboard';
+import { AuthContextProvider } from "./context/AuthContext";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -28,8 +29,9 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+const App = () => (
   <IonApp>
+    <AuthContextProvider>
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/home">
@@ -44,11 +46,14 @@ const App: React.FC = () => (
         <Route exact path="/dashboard">
           <Dashboard />
         </Route>
+          
+
         <Route exact path="/">
-          <Redirect to="/dashboard" />
+          <Redirect to="/home" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
+    </AuthContextProvider>
   </IonApp>
 );
 

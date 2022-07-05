@@ -225,7 +225,10 @@ color: #000000;
 }
 
 
-.bottom-tool{
-    top:401px;
+.bottom-tab{
+    top:801px;
+    bottom:0px;
+    margin-top: 402px;
+    
     
 }
