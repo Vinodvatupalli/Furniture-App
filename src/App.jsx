@@ -32,27 +32,27 @@ setupIonicReact();
 const App = () => (
   <IonApp>
     <AuthContextProvider>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route exact path="/home">
+            <Home />
           </Route>
           <Route exact path="/signup">
-          <SignUp />
-        </Route>
-        <Route exact path="/signin">
-          <SignIn />
-        </Route>
-        <Route exact path="/dashboard">
-          <Dashboard />
-        </Route>
-          
+            <SignUp />
+          </Route>
+          <Route exact path="/signin">
+            <SignIn />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
+          </Route>
 
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
+
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
     </AuthContextProvider>
   </IonApp>
 );

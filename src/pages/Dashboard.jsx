@@ -14,99 +14,191 @@ import {
   IonTabButton,
   IonLabel,
   IonAvatar,
-  useIonRouter
+  useIonRouter,
+  IonGrid,
+  IonRow,
+  IonCardContent,
+  IonCol,
+  IonTabs,
 } from "@ionic/react";
-import { arrowBack, menu, cart, home, search, personCircleOutline } from "ionicons/icons";
+import {
+  arrowBack,
+  menu,
+  cart,
+  home,
+  search,
+  personCircleOutline,
+  logOut,
+} from "ionicons/icons";
+import './SignIn';
 
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  let router = useIonRouter();
 
-  let router= useIonRouter();
-
-  const handleBack = () =>{
+  const handleBack = () => {
     router.push("/signin");
-  }
+  };
+
+  // const Account = () => {
+  //   const router = useIonRouter();
+  //   const handleLogout = async () => {
+  //     try{
+  //       await logOut();
+  //       router.push('/signin');
+  //       console.log("you are logged out");
+  //     }
+  //     catch(e){
+  //      console.log(e.message);
+  //     }
+
+  //     }
+    
+  
+  
   return (
     <IonPage>
-      <IonContent class="content">
-        <IonToolbar>
+      <IonContent class="content-dashboard">
+        <IonItem>
           <IonIcon
             className="back"
             style={{ fontSize: "20px", color: "primary" }}
             icon={arrowBack}
-            onClick={(e)=>{handleBack()}}
+            onClick={(e) => {
+              handleBack();
+            }}
           />
-        </IonToolbar>
-        <h1 className="dashboard-intro">
-          Discover the Best Furniture &emsp;&emsp;
-        </h1>
-        <IonSearchbar
-          className="search-dashboard"
-          showCancelButton="focus"
-        ></IonSearchbar>
-        <h3 className="cat">Categories</h3>
-        <div className="categories">
-          <IonButton id="btn1" color="dark-ash">
-            Chairs
-          </IonButton>
-          <IonButton id="btn2" color="dark-ash">
-            Tables
-          </IonButton>
-          <IonButton id="btn3" color="dark-ash">
-            Cupboards
-          </IonButton>
-          <IonButton id="btn4" color="dark-ash">
-            Sofa
-          </IonButton>
-        </div>
-        <div className="cards">
-          <IonCard className="furniture1">
-            <IonImg className="card-img1" src="/assets/images/img4.webp"></IonImg>
-          </IonCard>
-          <IonCard className="furniture2">
-            <IonImg className="card-img2" src="/assets/images/img5.webp"></IonImg>
-          </IonCard>
-        </div>
-        <div className="cardimag1-name">
-          William Solid Wood <br />
-          ₹ 17,999
-        </div>
-        <div className="cardimag2-name">
-          Dining Chair <br />
-          ₹ 12,070
-        </div>
-        <IonTabBar className="bottom-tab">
+        </IonItem>
 
-          <IonTabButton tab="menu">
+        <IonGrid className="dashboard-grid">
+          <IonRow className="dashboard-intro">
+            Discover the Best Furniture 
+          </IonRow>
+          <IonRow>
+            <IonSearchbar
+              className="search-dashboard"
+              showCancelButton="focus"
+            ></IonSearchbar>
+          </IonRow>
+          <IonRow className="cat">Categories</IonRow>
+          <IonRow className="categories">
+            <IonButton id="btn1" color="dark-ash">
+              Chairs
+            </IonButton>
+            <IonButton id="btn2" color="dark-ash">
+              Tables
+            </IonButton>
+            <IonButton id="btn3" color="dark-ash">
+              Cupboards
+            </IonButton>
+            <IonButton id="btn4" color="dark-ash">
+              Sofa
+            </IonButton>
+          </IonRow>
+
+          <IonRow className="cards1">
+            <IonCol >
+              <IonCard className="furniture1">
+                <IonImg
+                  className="card-img1"
+                  src="/assets/images/img4.webp"
+                ></IonImg>
+                </IonCard>
+              <IonLabel className="cardimag1-name">
+                William Solid Wood <br /></IonLabel>
+                <IonLabel className="cardimag1-name"> ₹ 17,999</IonLabel>
+              
+              
+            </IonCol>
+
+            <IonCol>
+              <IonCard className="furniture2">
+                <IonImg
+                  className="card-img2"
+                  src="/assets/images/img5.webp"
+                ></IonImg>
+               </IonCard>
+              <IonLabel className="cardimag2-name">
+                Dining Chair <br/></IonLabel>
+               <IonLabel className="cardimag2-name">₹ 12,070</IonLabel>   
+              
+             
+            </IonCol>
+          </IonRow>
+
+          <IonRow className="cards2">
+            <IonCol >
+              <IonCard className="furniture3">
+                <IonImg
+                  className="card-img3"
+                  src="/assets/images/img6.webp"
+                ></IonImg>
+             </IonCard>
+              <IonLabel className="cardimag3-name">
+                Leather Chair <br />
+                <IonLabel className="cardimag3-name">₹ 10,050</IonLabel>
+              </IonLabel>
+              
+            </IonCol>
+
+            <IonCol>
+              <IonCard className="furniture4">
+                <IonImg
+                  className="card-img4"
+                  src="/assets/images/img7.webp"
+                ></IonImg>
+              </IonCard>
+              <IonLabel className="cardimag4-name">
+                Sofa <br/>
+                <IonLabel className="cardimag4-name"> ₹ 13,090</IonLabel>
+              </IonLabel>
+             
+            </IonCol>
+          </IonRow>
+
+          <IonRow className="logout-btn">
+          <IonButton >LogOut</IonButton>
+
+        </IonRow>
+
+        </IonGrid>
+
+        
+    
+        <IonTabBar>
+          <IonTabButton tab="Menu">
             <IonIcon icon={menu} />
             <IonLabel>Menu</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="cart">
+          <IonTabButton tab="Cart">
             <IonIcon icon={cart} />
             <IonLabel>Cart</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="home">
+          <IonTabButton tab="Home">
             <IonIcon icon={home} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="search">
+          <IonTabButton tab="Search">
             <IonIcon icon={search} />
             <IonLabel>Search</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="person">
+          <IonTabButton tab="Account">
             <IonIcon icon={personCircleOutline} />
             <IonLabel>Account</IonLabel>
           </IonTabButton>
-
         </IonTabBar>
+        
       </IonContent>
     </IonPage>
   );
-};
+  
+ };
+
+
 
 export default Dashboard;

@@ -1,109 +1,145 @@
 .signup-main {
-    position: absolute;
-    width: 414px;
-    /* position: absolute; */
+    /* position: relative; */
+    display: flex;
+    /* width: 414px; */
     --background: linear-gradient(#E5E5E5, #E5E5E5);
+    height: 100%;
 
 }
+.signup-grid{
+    height: 100vh;
+}
 
-.signup-image {
-    width: 320px;
+/* .signup-image {
+    /* width: 320px;
     height: 290px;
-    left: 0px;
-    top: 0px;
+    left: 0%;
+    top: 0px; */
+    /* display: flex;
+    justify-content: center; 
+} */
+
+.signup-img-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .signup-head {
-    text-align: center;
+   display: flex;
+   justify-content: center;
     color: #1E3C1E;
-    position: absolute;
-    width: 120px;
-    height: 44px;
-    left: 104px;
-    top: 275px;
-
     font-family: 'Noto Serif';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 44px;
-    padding-top: -20px;
-    padding-left: -10px;
-}
-.signup-name{
-position: absolute;
-width: 220px;
-height: 38px;
-left: 48px;
-border-radius: 10px;
-background: #F8F8F8;
-top: 340px;
-font-family: 'Noto Serif';
-}
-.signup-email{
-position: absolute;
-width: 220px;
-height: 38px;
-left: 48px;
-background:#F8F8F8;
-border-radius: 10px;
-top: 385px;
-font-family: 'Noto Serif';
-}
-.signup-password{
-    position: absolute;
-width: 220px;
-height: 38px;
-left: 48px;
-/* top: 414px; */
-background:#F8F8F8;
-border-radius: 10px;
-top: 430px;
-font-family: 'Noto Serif';
-
-}
-.register-btn{
- position: absolute; 
-left: 105px;
-top: 480px;
-height: 33px; 
- font-family: 'Noto Serif';
-font-weight: 200px;
-}
-.text{
-position: absolute;
-width: 302px;
-height: 23px;
-left: 58px;
-top: 535px;
-font-family: 'Noto Serief';
-}
-.or{
-    position: absolute;
-width: 366px;
-height: 27px;
-left: 145px;
-top: 567px;
-font-family: 'Noto Serief';
-font-size: 13px;
-color: #1E3C1E;
-}
-.icons{
-    margin-top: 293px;
-    margin-right: 30px;
-    margin-left: 107px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
 }
 
-.signin-link{
-   margin-bottom: -400px;
-   margin-right: 10px;
-   margin-left: 220px;
-   color: white;
-   padding: 9px 1px 3px 1px;
-   font-size: 10px;
-   font-family: Noto serif;
-   font-family: 'Noto Serief';
-   border-radius: 10px;
+.signup-name {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+    border-radius: 10px;
+    background: #F8F8F8;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    
+    
 
 }
+.signup-input-name{
+     font-family: 'Noto Serif'; 
+}
+
+.signup-email {
+   
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    background: #F8F8F8;
+    border-radius: 10px;
+   
+    font-family: 'Noto Serif';
+    
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.signup-input-email{
+    font-family: 'Noto Serif'; 
+}
+.signup-password {
+   
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    background: #F8F8F8;
+    border-radius: 10px;
+  
+    font-family: 'Noto Serif';
+
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+
+}
+.signup-input-password{
+    font-family: 'Noto Serif'; 
+}
+
+.register-btn {
+    
+    font-family: 'Noto Serif';
+    font-weight: 200px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.register-btn-main{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.text{
+    
+    display: flex!important;
+   justify-content: center!important;
+   align-items: center!important;
+   /* justify-items: center; */
+    font-family: 'Noto Serief';
+    margin-top:-10px;
+}
+
+.signin-link {
+    color: white;
+    padding: 9px 1px 3px 1px;
+    font-size: 10px;
+    font-family: 'Noto Serief';
+    border-radius: 10px;
+    
+
+    
+}
+
+.or {
+    
+    font-family: 'Noto Serief';
+    font-size: 13px;
+    color: #1E3C1E;
+}
+
+.icons {
+    margin-top: 293px;
+    margin-right: 30px;
+    margin-left: 107px;
+
+}
+

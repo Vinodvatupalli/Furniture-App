@@ -11,6 +11,8 @@ import {
   IonLabel,
   IonIcon,
   useIonRouter,
+  IonGrid,
+  IonRow
 } from "@ionic/react";
 import { logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
 import "./SignIn.css";
@@ -30,8 +32,8 @@ const SignIn = () => {
 
   async function handleButtonClick(message) {
     const toast = await toastController.create({
-      color: "dark3",
-      position: "top",
+      color: "tertiary",
+      position: "bottom",
       duration: 3000,
       message: message,
       showCloseButton: true,
@@ -71,35 +73,42 @@ const SignIn = () => {
   return (
     <IonPage>
       <IonContent className="signin-main">
-        <IonImg className="signin-image" src="/assets/images/img2.jpg"></IonImg>
-        <div className="signin-head">SignIn</div>
-        <br />
-        <br />
-        <div className="signin-fields">
+        <IonGrid className="signin-grid">
+          <IonRow className="signin-image">
+        <IonImg src="/assets/images/img2.jpg">
+        </IonImg>
+        </IonRow>
+        <IonRow className="signin-head">SignIn</IonRow>
+        <IonRow className="signin-email">
           <IonInput
-            className="signin-email"
-            placeholder="Enter Email"
+            className="signin-input-email"
+            placeholder="Please give Email"
             onIonChange={(e) => setEmail(e.detail.value)}
           ></IonInput>
-          <IonInput
-            className="signin-password"
-            placeholder="Enter Password"
+          </IonRow>
+          <IonRow className="signin-password">
+          <IonInput 
+          className="signin-input-password"
+            placeholder="Please give Password"
             onIonChange={(e) => setPassword(e.detail.value)}
           ></IonInput>
-        </div>
+        </IonRow>
+        <IonRow className="login-btn-main">
         <IonButton
-          className="login-btn"
+        className="login-btn"
           color="light-green"
           onClick={handleSubmit}
         >
           LogIn
         </IonButton>
-
-        <IonLabel className="text">Don't have an Acoount? &nbsp;</IonLabel>
+        </IonRow>
+        <IonRow className="text-signin">
+        <IonLabel >Don't have an Acoount? &nbsp;</IonLabel>
         <IonButton routerLink="/signup" className="signup-link">
           Sign Up
         </IonButton>
-        <IonLabel className="or">OR</IonLabel>
+        </IonRow>
+        {/* <IonLabel className="or">OR</IonLabel>
         <div className="icons">
           <IonIcon
             style={{ fontSize: "20px", color: "primary" }}
@@ -116,7 +125,8 @@ const SignIn = () => {
             icon={logoTwitter}
           />
           &emsp;
-        </div>
+        </div> */}
+        </IonGrid>
       </IonContent>
     </IonPage>
   );
