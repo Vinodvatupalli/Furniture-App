@@ -33,27 +33,40 @@ import {
 import './SignIn';
 
 import "./Dashboard.css";
+import { auth } from "../pages/firebaseConfig";
+import { UserAuth } from "../context/AuthContext";
+import {toastController} from "@ionic/core";
+
 
 const Dashboard = () => {
   let router = useIonRouter();
+
+  const {logout}= UserAuth();
 
   const handleBack = () => {
     router.push("/signin");
   };
 
-  // const Account = () => {
-  //   const router = useIonRouter();
-  //   const handleLogout = async () => {
-  //     try{
-  //       await logOut();
-  //       router.push('/signin');
-  //       console.log("you are logged out");
-  //     }
-  //     catch(e){
-  //      console.log(e.message);
-  //     }
-
-  //     }
+  // const handleToast = async(message) => {
+  //   const toast = await toastController.create({
+  //     color: "tertiary",
+  //     position: "bottom",
+  //     duration: 3000,
+  //     message: message,
+  //     showCloseButton: true,
+  //   });
+  //   await toast.present();
+  // };
+  const handleLogout = async() => {
+    try{
+      await logout();
+      router.push('/signin');
+      window.location.reload();
+    }
+    catch(e){
+     console.log(e.message);
+    }
+  }
     
   
   
@@ -158,15 +171,15 @@ const Dashboard = () => {
           </IonRow>
 
           <IonRow className="logout-btn">
-          <IonButton >LogOut</IonButton>
+          <IonButton onClick={handleLogout}>LogOut</IonButton>
 
-        </IonRow>
+        </IonRow> 
 
         </IonGrid>
 
         
     
-        <IonTabBar>
+        <IonTabBar >
           <IonTabButton tab="Menu">
             <IonIcon icon={menu} />
             <IonLabel>Menu</IonLabel>

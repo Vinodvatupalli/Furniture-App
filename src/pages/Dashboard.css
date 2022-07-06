@@ -1,22 +1,22 @@
 .content {
     --background: linear-gradient(#E5E5E5, #E5E5E5);
-    height: 100%;
-}
-
-.dashboard-grid{
     height: 100vh;
 }
+
+/* .dashboard-grid{
+    height: 100%;
+} */
 
 
 .dashboard-intro {
     font-family: 'Noto Serif';
     font-style: normal;
     font-weight: 600;
-    font-size: 27px;
+    font-size: 23px;
     line-height: 33px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 18px;
     color: #1E3C1E;
 }
 
@@ -41,7 +41,7 @@
     font-size: 24px;
     line-height: 33px;
     color: #1E3C1E;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .categories {

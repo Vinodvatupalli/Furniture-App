@@ -72,6 +72,8 @@ font-weight: 200px;
 display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
  
 }
 
@@ -83,11 +85,12 @@ font-family: 'Noto Serief';
 }
 .signup-link{ 
     font-family: 'Noto Serief';
-   color: white;
-   padding: 9px 1px 3px 1px;
-   font-size: 10px;
+   color: rgb(49, 20, 20);
+   /* padding: 9px 1px 3px 1px; */
+   font-size: 12px;
    font-family: 'Noto Serief';
    border-radius: 10px;
+   text-decoration:underline;
 }
 .or{
 font-family: 'Noto Serief';

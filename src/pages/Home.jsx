@@ -10,7 +10,8 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonLabel
+  IonLabel,
+  IonCol
 } from "@ionic/react";
 import "./Home.css";
 
@@ -19,23 +20,25 @@ const Home = () => {
     <IonPage>
       <IonContent className="home-content">
         <IonGrid className="home-grid">
-          <IonRow>
-            <IonImg
-              className="furniture-image"
-              src="/assets/images/img1.jpg"
-            ></IonImg>
-             </IonRow>
-            <IonRow className="intro">
-              Enjoy Your Online Shopping
-            </IonRow>
-         
-          <IonRow >
-              <IonLabel className="sub-content">
-                Browse through all categories and shop the best furniture for your
-                needs.
-              </IonLabel>
-            </IonRow>
-            <IonRow>
+          <IonRow className="logo-app-name">
+            {/* <IonCol className="logo-img"> */}
+          <IonImg className="img" src="/assets/images/logo.png" ></IonImg>
+          {/* </IonCol> */}
+          <IonCol className="app-name"> 
+            <IonLabel >INTERIOR Furniture</IonLabel>
+          </IonCol>
+          </IonRow>
+          <IonRow className="intro">
+            Enjoy Your Online Shopping
+          </IonRow>
+
+          <IonRow className="sub-content">
+            <IonLabel >
+              Browse through all categories and shop the best furniture for your
+              needs.
+            </IonLabel>
+          </IonRow>
+          <IonRow className="main-started-btn">
             <IonButton
               routerLink="/signup"
               className="getstarted-btn"
@@ -44,7 +47,7 @@ const Home = () => {
             >
               Get Started
             </IonButton>
-            </IonRow>
+          </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>

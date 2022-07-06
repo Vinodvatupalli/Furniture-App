@@ -119,11 +119,13 @@
 }
 
 .signin-link {
-    color: white;
-    padding: 9px 1px 3px 1px;
-    font-size: 10px;
+    color: rgb(73, 25, 25);
+    /* padding: 9px 1px 3px 1px; */
+    font-size: 12px;
     font-family: 'Noto Serief';
     border-radius: 10px;
+    text-decoration: underline;
+
     
 
     
