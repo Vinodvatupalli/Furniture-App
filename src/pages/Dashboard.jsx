@@ -170,8 +170,8 @@ const Dashboard = () => {
             </IonCol>
           </IonRow>
 
-          <IonRow className="logout-btn">
-          <IonButton onClick={handleLogout}>LogOut</IonButton>
+          <IonRow className="logout-btn" >
+          <IonButton color="light-green" onClick={handleLogout}>LogOut</IonButton>
 
         </IonRow> 
 
