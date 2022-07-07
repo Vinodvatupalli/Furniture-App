@@ -49,7 +49,7 @@ const App = () => (
 
 
           <Route exact path="/">
-            <Redirect to="/dashboard" />
+            <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
       </IonReactRouter>

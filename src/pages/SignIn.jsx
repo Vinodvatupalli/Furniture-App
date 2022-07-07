@@ -31,7 +31,7 @@ const SignIn = () => {
   const [present,dismiss]= useIonToast();
   const [presentAlert]= useIonAlert();
 
-  const { signIn, user } = UserAuth();
+  const { signIn } = UserAuth();
 
 
   async function handleButtonClick(message) {
@@ -104,7 +104,7 @@ const SignIn = () => {
         <IonImg src="/assets/images/img2.jpg">
         </IonImg>
         </IonRow>
-        <IonRow className="signin-head">SignIn</IonRow>
+        <IonRow className="signin-head">Signin</IonRow>
         <IonRow className="signin-email">
           <IonInput
             className="signin-input-email"

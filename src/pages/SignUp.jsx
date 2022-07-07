@@ -105,7 +105,7 @@ const SignUp = () => {
         <IonRow className="signup-img-main">
         <IonImg className="signup-image" src="/assets/images/img2.jpg"></IonImg>
         </IonRow>
-        <IonRow className="signup-head">SignUp</IonRow>
+        <IonRow className="signup-head">Signup</IonRow>
         <IonRow className="signup-name">
           <IonInput
             className="signup-input-name"
