@@ -92,13 +92,22 @@ font-family: 'Noto Serief';
    border-radius: 10px;
    text-decoration:underline;
 }
-.or{
+.or-signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 font-family: 'Noto Serief';
 font-size: 13px;
 color: #1E3C1E;
 }
-.icons{
-    margin-top: 273px;
+.icons-signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+#signin-fb-icon{
     margin-right: 30px;
-    margin-left: 107px;
 }

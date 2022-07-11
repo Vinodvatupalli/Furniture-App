@@ -85,12 +85,13 @@ const SignIn = () => {
     } else {
       try {
         await signIn(email, password);
-        handleButtonClick("Login successful");
+        handleButtonClick("Login successfully");
         ClearInputs();
         router.push("/dashboard");
       } catch (e) {
         setError(e.message);
         handleAlert(e.message);
+        ClearInputs();
       }
     }
     // window.location.reload(false);
@@ -134,28 +135,24 @@ const SignIn = () => {
         </IonRow>
         <IonRow className="text-signin">
         <IonLabel >Don't have an Acoount? &nbsp;</IonLabel>
-        <IonButton fill="clear" routerLink="/signup" className="signup-link">
+        <IonButton fill="clear" onClick={ClearInputs} routerLink="/signup" className="signup-link">
           Sign Up
         </IonButton>
         </IonRow>
-        {/* <IonLabel className="or">OR</IonLabel>
-        <div className="icons">
-          <IonIcon
+        <IonRow className="or-signin">
+        <IonLabel >OR</IonLabel>
+        </IonRow>
+        
+        <IonRow className="icons-signin">
+          <IonIcon id="signin-fb-icon"
             style={{ fontSize: "20px", color: "primary" }}
             icon={logoFacebook}
           />
-          &emsp;
-          <IonIcon
+          <IonIcon id="signin-g-icon"
             style={{ fontSize: "20px", color: "primary" }}
             icon={logoGoogle}
           />
-          &emsp;
-          <IonIcon
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoTwitter}
-          />
-          &emsp;
-        </div> */}
+        </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>

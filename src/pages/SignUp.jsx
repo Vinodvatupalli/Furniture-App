@@ -14,7 +14,8 @@ import {
   useIonRouter,
   IonGrid,
   useIonAlert,
-  useIonToast
+  useIonToast,
+  IonCol
 } from "@ionic/react";
 import React, { useState, useEffect } from "react";
 import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
@@ -93,6 +94,7 @@ const SignUp = () => {
       } catch (e) {
         setError(e.message);
         handleAlert(e.message);
+        ClearInputs();
       }
     }
     // window.location.reload(false);
@@ -145,28 +147,27 @@ const SignUp = () => {
         </IonRow>
         <IonRow className="text">
         <IonLabel >Already have an Account? </IonLabel>
-        <IonButton fill="clear" routerLink="/signin" className="signin-link">
+        <IonButton fill="clear" onClick={ClearInputs} routerLink="/signin"  className="signin-link">
           Sign In
         </IonButton>
         </IonRow>
-        {/* <IonLabel className="or">OR</IonLabel>
-        <div className="icons">
-          <IonIcon
+
+        <IonRow className="or-signup">
+        <IonLabel >OR</IonLabel>
+        </IonRow>
+        <IonRow className="icons-signup">
+          
+          <IonIcon id="fb-icon"
             style={{ fontSize: "20px", color: "primary" }}
             icon={logoFacebook}
           />
-          &emsp;
-          <IonIcon
+       
+          <IonIcon id="google-icon"
             style={{ fontSize: "20px", color: "primary" }}
             icon={logoGoogle}
           />
-          &emsp;
-          <IonIcon
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoTwitter}
-          />
-          &emsp;
-        </div> */}
+        
+        </IonRow>
 
         </IonGrid>
 
