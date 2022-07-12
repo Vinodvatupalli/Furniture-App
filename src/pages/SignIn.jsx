@@ -15,7 +15,8 @@ import {
   IonRow,
   useIonToast,
   useIonAlert,
-  IonLoading
+  IonLoading,
+  useIonLoading
 } from "@ionic/react";
 import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
 import "./SignIn.css";
@@ -30,7 +31,8 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [present,dismiss]= useIonToast();
-  const [showLoading, setShowLoading] = useState(false);
+  // const [showLoading, setShowLoading] = useState(false);
+  const [presentloading, dismissloading] = useIonLoading();
   const [presentAlert]= useIonAlert();
 
   const { signIn } = UserAuth();
@@ -86,23 +88,27 @@ const SignIn = () => {
       handleButtonClick("Please enter email address");
     } else {
       try {
-        setShowLoading(true);
+
+        presentloading({
+          message: 'Loading!...',
+          duration: 3000,
+          spinner:"lines-sharp",
+        })
+        // setShowLoading(true);
         await signIn(email, password);
-        setShowLoading(false);
+        // setShowLoading(false);
         handleButtonClick("Login successfully");
         ClearInputs();
+        dismissloading();
         router.push("/dashboard");
       } catch (e) {
         setError(e.message);
-        setShowLoading(false);
+        // setShowLoading(false);
         handleAlert(e.message);
         ClearInputs();
       }
     }
   }
-    if(showLoading){
-      return <IonLoading isOpen/>
-  };
 
   return (
     <IonPage>

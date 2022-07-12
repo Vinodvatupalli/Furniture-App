@@ -16,7 +16,8 @@ import {
   useIonAlert,
   useIonToast,
   IonCol,
-  IonLoading
+  IonLoading,
+  useIonLoading
 } from "@ionic/react";
 import React, { useState, useEffect } from "react";
 import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
@@ -46,7 +47,8 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { createUser, currentUser } = UserAuth();
-  const [showLoading, setShowLoading] = useState(false);
+  // const [showLoading, setShowLoading] = useState(false);
+  const [presentloading, dismissloading] = useIonLoading();
   const [presentAlert] = useIonAlert();
 
   let router = useIonRouter();
@@ -87,26 +89,33 @@ const SignUp = () => {
       handleButtonClick("Please enter a valid email address");
     } else {
       try {
-        setShowLoading(true);
+
+        presentloading({
+          message: 'Loading!...',
+          duration: 3000,
+          spinner:"lines-sharp",
+        })
+
+        // setShowLoading(true);
         await createUser(email, password);
-        setShowLoading(false);
+        // setShowLoading(false);
         handleButtonClick("user registered successfully");
         ClearInputs();
-
+        dismissloading();
         router.push("/signin");
         
       } catch (e) {
         setError(e.message);
-        setShowLoading(false);
+        // setShowLoading(false);
         handleAlert(e.message);
         ClearInputs();
       }
     }
    
     }
-    if(showLoading){
-      return <IonLoading isOpen/>
-  };
+  //   if(showLoading){
+  //     return <IonLoading isOpen/>
+  // };
 
   return (
     <IonPage>
@@ -159,23 +168,6 @@ const SignUp = () => {
           Sign In
         </IonButton>
         </IonRow>
-
-        {/* <IonRow className="or-signup">
-        <IonLabel >OR</IonLabel>
-        </IonRow>
-        <IonRow className="icons-signup">
-          
-          <IonIcon id="fb-icon"
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoFacebook}
-          />
-       
-          <IonIcon id="google-icon"
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoGoogle}
-          />
-        
-        </IonRow> */}
 
         </IonGrid>
 
