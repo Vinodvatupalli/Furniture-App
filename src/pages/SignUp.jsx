@@ -149,24 +149,6 @@ const SignUp = () => {
           Sign In
         </IonButton>
         </IonRow>
-        {/* <IonLabel className="or">OR</IonLabel>
-        <div className="icons">
-          <IonIcon
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoFacebook}
-          />
-          &emsp;
-          <IonIcon
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoGoogle}
-          />
-          &emsp;
-          <IonIcon
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoTwitter}
-          />
-          &emsp;
-        </div> */}
 
         </IonGrid>
 
