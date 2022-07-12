@@ -15,7 +15,8 @@ import {
   IonGrid,
   useIonAlert,
   useIonToast,
-  IonCol
+  IonCol,
+  IonLoading
 } from "@ionic/react";
 import React, { useState, useEffect } from "react";
 import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
@@ -45,6 +46,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { createUser, currentUser } = UserAuth();
+  const [showLoading, setShowLoading] = useState(false);
   const [presentAlert] = useIonAlert();
 
   let router = useIonRouter();
@@ -85,7 +87,9 @@ const SignUp = () => {
       handleButtonClick("Please enter a valid email address");
     } else {
       try {
+        setShowLoading(true);
         await createUser(email, password);
+        setShowLoading(false);
         handleButtonClick("user registered successfully");
         ClearInputs();
 
@@ -93,11 +97,15 @@ const SignUp = () => {
         
       } catch (e) {
         setError(e.message);
+        setShowLoading(false);
         handleAlert(e.message);
         ClearInputs();
       }
     }
-    // window.location.reload(false);
+   
+    }
+    if(showLoading){
+      return <IonLoading isOpen/>
   };
 
   return (
@@ -152,7 +160,7 @@ const SignUp = () => {
         </IonButton>
         </IonRow>
 
-        <IonRow className="or-signup">
+        {/* <IonRow className="or-signup">
         <IonLabel >OR</IonLabel>
         </IonRow>
         <IonRow className="icons-signup">
@@ -167,7 +175,7 @@ const SignUp = () => {
             icon={logoGoogle}
           />
         
-        </IonRow>
+        </IonRow> */}
 
         </IonGrid>
 

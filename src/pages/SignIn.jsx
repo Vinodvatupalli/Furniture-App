@@ -14,7 +14,8 @@ import {
   IonGrid,
   IonRow,
   useIonToast,
-  useIonAlert
+  useIonAlert,
+  IonLoading
 } from "@ionic/react";
 import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
 import "./SignIn.css";
@@ -29,6 +30,7 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [present,dismiss]= useIonToast();
+  const [showLoading, setShowLoading] = useState(false);
   const [presentAlert]= useIonAlert();
 
   const { signIn } = UserAuth();
@@ -84,17 +86,22 @@ const SignIn = () => {
       handleButtonClick("Please enter email address");
     } else {
       try {
+        setShowLoading(true);
         await signIn(email, password);
+        setShowLoading(false);
         handleButtonClick("Login successfully");
         ClearInputs();
         router.push("/dashboard");
       } catch (e) {
         setError(e.message);
+        setShowLoading(false);
         handleAlert(e.message);
         ClearInputs();
       }
     }
-    // window.location.reload(false);
+  }
+    if(showLoading){
+      return <IonLoading isOpen/>
   };
 
   return (
