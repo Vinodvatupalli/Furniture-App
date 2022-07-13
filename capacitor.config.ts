@@ -1,28 +1,33 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'com.furntitureptg.app',
-  appName: 'Furniture-App',
-  webDir: 'build',
+  appId: "com.furntitureptg.app",
+  appName: "Furniture-App",
+  webDir: "build",
   bundledWebRuntime: false,
 
   // plugins: {
   //   SplashScreen: {
-  //     // launchShowDuration: 3000,
-  //     launchAutoHide: true,
+  //     launchAutoHide: false,
   //     backgroundColor: "#ffffffff",
-  //     androidSplashResourceName: "splash",
+  //     // androidSplashResourceName: "splash",
   //     androidScaleType: "CENTER_CROP",
-  //     showSpinner: true,
-  //     androidSpinnerStyle: "large",
-  //     iosSpinnerStyle: "small",
-  //     spinnerColor: "#999999",
+  //     // showSpinner: true,
+  //     // // androidSpinnerStyle: "large",
+  //     // iosSpinnerStyle: "small",
+  //     // spinnerColor: "#999999",
   //     splashFullScreen: true,
-  //     splashImmersive: true,
-  //     layoutName: "launch_screen",
-  //     useDialog: true,
-  //   },
-  // },
+  //     splashImmersive: false,
+  //     // layoutName: "launch_screen",
+  //     // useDialog: true,
+  //   }
+  // }
+
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 1000,
+    },
+  },
 };
 
 export default config;
