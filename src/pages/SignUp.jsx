@@ -108,6 +108,7 @@ const SignUp = () => {
         setError(e.message);
         // setShowLoading(false);
         handleAlert(e.message);
+        dismissloading();
         ClearInputs();
       }
     }
