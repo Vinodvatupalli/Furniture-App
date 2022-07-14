@@ -21,12 +21,19 @@ import {
 import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
 import "./SignIn.css";
 import React, { useState } from "react";
+// import Plugins from '@capacitor/core'
 
 
 import { toastController } from "@ionic/core";
 import { UserAuth } from "../context/AuthContext";
 
-const SignIn = () => {
+ const SignIn = () => {
+
+  
+  // async function signIn(){
+  //   console.log(Plugins.GoogleAuth.signIn())
+  // }
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -173,4 +180,6 @@ const SignIn = () => {
   );
 };
 
+
 export default SignIn;
+

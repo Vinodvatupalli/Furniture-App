@@ -26,8 +26,19 @@ const config: CapacitorConfig = {
   plugins: {
     SplashScreen: {
       launchShowDuration: 1000,
-    },
-  },
-};
+  //   },
+  // },
 
+  // /// <reference types="'@codetrix-studio/capacitor-google-auth'" />
+  // plugins: {
+    // GoogleAuth: {
+    //   scopes: ['profile', 'email'],
+    //   serverClientId: '555951801946-9je7oan7i2gl8ckcmsjd447f0mbsi915.apps.googleusercontent.com',
+    //   forceCodeForRefreshToken: true,
+    // },
+  },
+
+}
+}
 export default config;
+

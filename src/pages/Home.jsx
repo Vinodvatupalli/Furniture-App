@@ -14,8 +14,13 @@ import {
   IonCol
 } from "@ionic/react";
 import "./Home.css";
+// import Plugins from '@capacitor/core'
 
 const Home = () => {
+
+  // async function signIn(){
+  //   console.log(Plugins.GoogleAuth.signIn())
+  // }
   return (
     <IonPage>
       <IonContent className="home-content">

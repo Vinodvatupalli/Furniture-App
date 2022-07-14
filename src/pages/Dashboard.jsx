@@ -179,7 +179,7 @@ const Dashboard = () => {
 
         
     
-        <IonTabBar >
+        <IonTabBar slot="Bottom">
           <IonTabButton tab="Menu">
             <IonIcon icon={menu} />
             <IonLabel>Menu</IonLabel>
