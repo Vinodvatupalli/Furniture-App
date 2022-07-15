@@ -25,6 +25,7 @@ import React, { useState } from "react";
 
 import { toastController } from "@ionic/core";
 import { UserAuth } from "../context/AuthContext";
+import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -35,7 +36,7 @@ const SignIn = () => {
   const [presentloading, dismissloading] = useIonLoading();
   const [presentAlert]= useIonAlert();
 
-  const { signIn } = UserAuth();
+  const { signIn} = UserAuth();
 
 
   async function handleButtonClick(message) {
@@ -49,6 +50,17 @@ const SignIn = () => {
       icon: alert
     });
     // await toast.present();
+  }
+
+  const signInGoogle = async () => {
+    GoogleAuth.initialize();
+    const result = await GoogleAuth.signIn();
+    console.log(result);
+    if (result) {
+      router.push("/dashboard");
+      console.log(result);
+      
+    }
   }
 
   async function handleAlert(message) {
@@ -111,6 +123,9 @@ const SignIn = () => {
     }
   }
 
+ 
+
+
   return (
     <IonPage>
       <IonContent className="signin-main">
@@ -163,6 +178,7 @@ const SignIn = () => {
             icon={logoFacebook}
           />
           <IonIcon id="signin-g-icon"
+           onClick={signInGoogle}
             style={{ fontSize: "20px", color: "primary" }}
             icon={logoGoogle}
           />

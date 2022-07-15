@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
+import Chairs from "./pages/Chairs";
 import { AuthContextProvider } from "./context/AuthContext";
 
 /* Core CSS required for Ionic components to work properly */
@@ -148,6 +149,10 @@ const App = () => {
               </Route>
               <Route exact path="/dashboard">
                 <Dashboard />
+              </Route>
+
+              <Route exact path="/chairs">
+                <Chairs />
               </Route>
 
               <Route exact path="/">

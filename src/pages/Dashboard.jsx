@@ -18,6 +18,8 @@ import {
   IonGrid,
   IonRow,
   IonCardContent,
+  IonInfiniteScroll,
+  IonInfiniteScrollContent,
   IonCol,
   IonTabs,
 } from "@ionic/react";
@@ -31,11 +33,14 @@ import {
   logOut,
 } from "ionicons/icons";
 import './SignIn';
+import './Chairs'; 
 
 import "./Dashboard.css";
-import { auth } from "../pages/firebaseConfig";
+// import { auth } from "../pages/firebaseConfig";
 import { UserAuth } from "../context/AuthContext";
-import {toastController} from "@ionic/core";
+// import {toastController} from "@ionic/core";
+import { Link  } from "react-router-dom";
+import { RouterLink } from "@ionic/react";
 
 
 const Dashboard = () => {
@@ -46,6 +51,10 @@ const Dashboard = () => {
   const handleBack = () => {
     router.push("/signin");
   };
+
+  // const handleBack = () => {
+  //   router.push("/chairs");
+  // }
 
   // const handleToast = async(message) => {
   //   const toast = await toastController.create({
@@ -96,7 +105,7 @@ const Dashboard = () => {
           </IonRow>
           <IonRow className="cat">Categories</IonRow>
           <IonRow className="categories">
-            <IonButton id="btn1" color="dark-ash">
+            <IonButton routerLink="/chairs" id="btn1" color="dark-ash">
               Chairs
             </IonButton>
             <IonButton id="btn2" color="dark-ash">
@@ -179,7 +188,7 @@ const Dashboard = () => {
 
         
     
-        <IonTabBar >
+        <IonTabBar slot="Bottom">
           <IonTabButton tab="Menu">
             <IonIcon icon={menu} />
             <IonLabel>Menu</IonLabel>

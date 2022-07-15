@@ -4,4 +4,5 @@
     <string name="title_activity_main">Furniture-App</string>
     <string name="package_name">com.furnitureapp.app</string>
     <string name="custom_url_scheme">com.furnitureapp.app</string>
+    <string name="server_client_id">555951801946-bvnsarl2okhdsar6986nqs3gh3gul0jp.apps.googleusercontent.com</string>
 </resources>
