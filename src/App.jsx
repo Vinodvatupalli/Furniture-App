@@ -13,6 +13,8 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
 import Chairs from "./pages/Chairs";
+import Menu from "../src/Tabs/Menu";
+import Account from "../src/Tabs/Account";
 import { AuthContextProvider } from "./context/AuthContext";
 
 /* Core CSS required for Ionic components to work properly */
@@ -38,7 +40,7 @@ import { Browser } from "@capacitor/browser";
 import { useEffect, useState } from "react";
 import { collection, doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "./pages/firebaseConfig";
-// import Dashboard from './pages/Dashboard';
+
 
 setupIonicReact();
 
@@ -156,7 +158,14 @@ const App = () => {
               </Route>
 
               <Route exact path="/">
-                <Redirect to="/home" />
+                <Redirect to="/dashboard" />
+              </Route>
+
+              <Route exact path="/menu">
+                <Menu/>
+              </Route>
+              <Route exact path="/account">
+                <Account/>
               </Route>
             </IonRouterOutlet>
           </IonReactRouter>

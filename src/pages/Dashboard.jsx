@@ -22,6 +22,8 @@ import {
   IonInfiniteScrollContent,
   IonCol,
   IonTabs,
+  Route,
+  IonRouterOutlet,
 } from "@ionic/react";
 import {
   arrowBack,
@@ -34,6 +36,7 @@ import {
 } from "ionicons/icons";
 import './SignIn';
 import './Chairs'; 
+import '../Tabs/Account';
 
 import "./Dashboard.css";
 // import { auth } from "../pages/firebaseConfig";
@@ -41,6 +44,7 @@ import { UserAuth } from "../context/AuthContext";
 // import {toastController} from "@ionic/core";
 import { Link  } from "react-router-dom";
 import { RouterLink } from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
 
 
 const Dashboard = () => {
@@ -187,9 +191,10 @@ const Dashboard = () => {
         </IonGrid>
 
         
-    
-        <IonTabBar slot="Bottom">
-          <IonTabButton tab="Menu">
+        
+          
+        <IonTabBar >
+          <IonTabButton tab="Menu" href="/Menu">
             <IonIcon icon={menu} />
             <IonLabel>Menu</IonLabel>
           </IonTabButton>
@@ -209,7 +214,7 @@ const Dashboard = () => {
             <IonLabel>Search</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="Account">
+          <IonTabButton tab="Account" href="/Account">
             <IonIcon icon={personCircleOutline} />
             <IonLabel>Account</IonLabel>
           </IonTabButton>
