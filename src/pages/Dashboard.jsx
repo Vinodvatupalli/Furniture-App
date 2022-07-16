@@ -80,7 +80,7 @@ const Dashboard = () => {
   
   
   return (
-    <IonPage>
+    // <IonPage>
       <IonContent class="content-dashboard">
         <IonItem>
           <IonIcon
@@ -183,11 +183,9 @@ const Dashboard = () => {
           <IonButton color="light-green" onClick={handleLogout}>LogOut</IonButton>
 
         </IonRow> 
-
         </IonGrid>
 
-        
-    
+        {/* <IonTabs> */}
         <IonTabBar slot="Bottom">
           <IonTabButton tab="Menu">
             <IonIcon icon={menu} />
@@ -214,9 +212,11 @@ const Dashboard = () => {
             <IonLabel>Account</IonLabel>
           </IonTabButton>
         </IonTabBar>
+        {/* </IonTabs> */}
+        
         
       </IonContent>
-    </IonPage>
+    // </IonPage>
   );
   
  };
