@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:555951801946:android:4aab2abac08a874c3c7a63",
+        "mobilesdk_app_id": "1:555951801946:android:06267d7ba42d5f033c7a63",
         "android_client_info": {
-          "package_name": "com.furntitureptg.app"
+          "package_name": "com.furnitureapp.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "555951801946-c42rjerf89jd8ffl5c62ou7nhfpa374o.apps.googleusercontent.com",
+          "client_id": "555951801946-kb7e8mvbq1d55knkau0sr2v7tuik3afb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.furntitureptg.app",
+            "package_name": "com.furnitureapp.app",
             "certificate_hash": "aeef3fe2a07f25cfbd2ec3c983dda33d459c7cea"
           }
         },
