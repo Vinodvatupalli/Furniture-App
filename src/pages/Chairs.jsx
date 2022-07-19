@@ -23,6 +23,7 @@ import {
     useIonViewWillEnter,
     IonCol,
     IonTabs,
+    IonText
 } from "@ionic/react";
 import {
     arrowBack,
@@ -35,6 +36,9 @@ import {
 } from "ionicons/icons";
 import { entries } from "../pages/data";
 import { useState } from "react";
+import { LazyLoadImage } from "@dcasia/react-lazy-load-image-component-improved";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 import './Dashboard';
@@ -76,14 +80,19 @@ const Chairs = () => {
             pushData();
             console.log('Loaded data');
             ev.target.complete();
-            if (alldata.length === 1000) {
-                setInfiniteDisabled(true);
+            if (alldata.length === 20) {
+                setInfiniteDisabled(alldata.length<20);
             }
         }, 2000);
     }
     useIonViewWillEnter(() => {
         pushData();
     });
+
+    const handleCategory = (path) => {
+        router.push(path);
+        window.location.reload();
+      };
 
 
     return (
@@ -100,27 +109,48 @@ const Chairs = () => {
           />
         </IonItem>
                 <IonGrid >
+                    <IonRow>
                     {alldata.map((data) => {
                         return (
-                            <IonCard >
-                                <IonRow size="4" >
+                            <IonCol
+                            key={data.id}
+                            className="ion-text-center"
+                            size="6"
+                            sizeSm="4"
+                            sizeMd="3"
+                          >
+                            <IonCard key={data.id} button className="ion-padding ion-text-center" onClick={() =>
+                      handleCategory("/tabs/home/" + data.title.toLowerCase())}>
+                                {/* <IonRow size="4" >
                                     <IonCol ><IonImg src={data.image} /></IonCol>
                                     <IonCol size="7">
                                         <IonRow className="product">{data.product}</IonRow>
                                         <IonRow className="price">{data.price}</IonRow>
                                     </IonCol>
 
-                                </IonRow>
+                                </IonRow> */}
+                    <IonRow>
+                        <IonCol>
+                    <LazyLoadImage src={data.image} effect="blur"  placeholderSrc={process.env.PUBLIC_URL + "/assets/images/alt img.png"} width="100px" height="100px" style={{margin: "auto"}} />
+                    </IonCol>
+                    <IonCol>
+                    <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.product}</IonText></IonRow> 
+                   <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.price}</IonText></IonRow> 
+                    </IonCol>
+                    </IonRow>
                             </IonCard>
+                            </IonCol>
                         )
                     })
                     }
+                    </IonRow>
+
                     <IonInfiniteScroll onIonInfinite={loadData} threshold="100px" disabled={isInfiniteDisabled}>
                         <IonInfiniteScrollContent loadingSpinner="bubbles" loadingText="Loading more data...">
 
                         </IonInfiniteScrollContent>
                     </IonInfiniteScroll>
-
+              
                 </IonGrid>
 
             </IonContent>

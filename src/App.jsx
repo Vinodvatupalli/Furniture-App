@@ -158,7 +158,7 @@ const App = () => {
               </Route>
 
               <Route exact path="/">
-                <Redirect to="/dashboard" />
+                <Redirect to="/home" />
               </Route>
 
               <Route exact path="/menu">

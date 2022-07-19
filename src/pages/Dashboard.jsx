@@ -190,7 +190,7 @@ const Dashboard = () => {
 
         </IonGrid>
 
-        
+        </IonContent>
         
           
         <IonTabBar >
@@ -220,7 +220,7 @@ const Dashboard = () => {
           </IonTabButton>
         </IonTabBar>
         
-      </IonContent>
+     
     </IonPage>
   );
   
