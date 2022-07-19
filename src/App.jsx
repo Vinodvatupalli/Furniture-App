@@ -101,7 +101,7 @@ const App = () => {
       setUpdateDetails(data.updateMsg);
       setAppVersion(data.current);
     } else {
-      console.log("No such document!");
+      console.log("There is no document");
     }
   };
 
@@ -116,12 +116,8 @@ const App = () => {
           handleAlert(msg, title, btn, appVersion);
         }
       }
-      // else {
-      //   const msg = "App is not running on android platform";
-      //   handleToast(msg);
-      // }
     } catch (error) {
-      // handleAlert(error.message);
+      handleAlert(error.message);
     }
   };
 
