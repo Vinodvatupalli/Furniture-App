@@ -21,12 +21,10 @@ const Home = () => {
       <IonContent className="home-content">
         <IonGrid className="home-grid">
           <IonRow className="logo-app-name">
-            {/* <IonCol className="logo-img"> */}
-          <IonImg className="img" src="/assets/images/logo.png" ></IonImg>
-          {/* </IonCol> */}
-          <IonCol className="app-name"> 
-            <IonLabel >INTERIOR Furniture</IonLabel>
-          </IonCol>
+            <IonImg className="img" src="/assets/images/logo.png" ></IonImg>
+            <IonCol className="app-name">
+              <IonLabel >INTERIOR Furniture</IonLabel>
+            </IonCol>
           </IonRow>
           <IonRow className="intro">
             Enjoy Your Online Shopping

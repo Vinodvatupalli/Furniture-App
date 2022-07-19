@@ -48,11 +48,11 @@ const Chairs = () => {
 
     let router = useIonRouter();
 
-  const handleBack = () => {
-    router.push("/dashboard");
-  };
+    const handleBack = () => {
+        router.push("/dashboard");
+    };
 
-    const [alldata, setData] = useState ([]);
+    const [alldata, setData] = useState([]);
     const [isInfiniteDisabled, setInfiniteDisabled] = useState(false);
 
 
@@ -81,7 +81,7 @@ const Chairs = () => {
             console.log('Loaded data');
             ev.target.complete();
             if (alldata.length === 20) {
-                setInfiniteDisabled(alldata.length<20);
+                setInfiniteDisabled(alldata.length < 20);
             }
         }, 2000);
     }
@@ -92,57 +92,50 @@ const Chairs = () => {
     const handleCategory = (path) => {
         router.push(path);
         window.location.reload();
-      };
+    };
 
 
     return (
         <IonPage>
             <IonContent class="content-dashboard">
-            <IonItem>
-          <IonIcon
-            className="back"
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={arrowBack}
-            onClick={(e) => {
-              handleBack();
-            }}
-          />
-        </IonItem>
+                <IonItem>
+                    <IonIcon
+                        className="back"
+                        style={{ fontSize: "20px", color: "primary" }}
+                        icon={arrowBack}
+                        onClick={(e) => {
+                            handleBack();
+                        }}
+                    />
+                </IonItem>
                 <IonGrid >
                     <IonRow>
-                    {alldata.map((data) => {
-                        return (
-                            <IonCol
-                            key={data.id}
-                            className="ion-text-center"
-                            size="6"
-                            sizeSm="4"
-                            sizeMd="3"
-                          >
-                            <IonCard key={data.id} button className="ion-padding ion-text-center" onClick={() =>
-                      handleCategory("/tabs/home/" + data.title.toLowerCase())}>
-                                {/* <IonRow size="4" >
-                                    <IonCol ><IonImg src={data.image} /></IonCol>
-                                    <IonCol size="7">
-                                        <IonRow className="product">{data.product}</IonRow>
-                                        <IonRow className="price">{data.price}</IonRow>
-                                    </IonCol>
+                        {alldata.map((data) => {
+                            return (
+                                <IonCol
+                                    key={data.id}
+                                    className="ion-text-center"
+                                    size="6"
+                                    sizeSm="4"
+                                    sizeMd="3"
+                                >
+                                    <IonCard key={data.id} button className="ion-padding ion-text-center" onClick={() =>
+                                        handleCategory("/tabs/home/" + data.title.toLowerCase())}>
 
-                                </IonRow> */}
-                    <IonRow>
-                        <IonCol>
-                    <LazyLoadImage src={data.image} effect="blur"  placeholderSrc={process.env.PUBLIC_URL + "/assets/images/alt img.png"} width="100px" height="100px" style={{margin: "auto"}} />
-                    </IonCol>
-                    <IonCol>
-                    <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.product}</IonText></IonRow> 
-                   <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.price}</IonText></IonRow> 
-                    </IonCol>
-                    </IonRow>
-                            </IonCard>
-                            </IonCol>
-                        )
-                    })
-                    }
+                                        <IonRow>
+                                            <IonCol>
+                                                <LazyLoadImage src={data.image} effect="blur" placeholderSrc={process.env.PUBLIC_URL + "/assets/images/alt img.png"} width="100px" height="100px" style={{ margin: "auto" }} />
+                                            </IonCol>
+                                            <IonCol>
+                                                <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.product}</IonText></IonRow>
+                                                <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.price}</IonText></IonRow>
+                                            </IonCol>
+                                        </IonRow>
+                                    </IonCard>
+                                </IonCol>
+                            )
+                        })
+                        }
                     </IonRow>
 
                     <IonInfiniteScroll onIonInfinite={loadData} threshold="100px" disabled={isInfiniteDisabled}>
@@ -150,7 +143,7 @@ const Chairs = () => {
 
                         </IonInfiniteScrollContent>
                     </IonInfiniteScroll>
-              
+
                 </IonGrid>
 
             </IonContent>

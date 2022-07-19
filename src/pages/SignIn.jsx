@@ -31,25 +31,22 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [present,dismiss]= useIonToast();
-  // const [showLoading, setShowLoading] = useState(false);
+  const [present, dismiss] = useIonToast();
   const [presentloading, dismissloading] = useIonLoading();
-  const [presentAlert]= useIonAlert();
+  const [presentAlert] = useIonAlert();
 
-  const { signIn} = UserAuth();
+  const { signIn } = UserAuth();
 
 
   async function handleButtonClick(message) {
-    // const toast = await toastController.create({
-      present({
+    present({
       color: "light-green",
       position: "top",
       duration: 3000,
       message: message,
-      made:"ios",
+      made: "ios",
       icon: alert
     });
-    // await toast.present();
   }
 
   const signInGoogle = async () => {
@@ -59,7 +56,7 @@ const SignIn = () => {
     if (result) {
       router.push("/dashboard");
       console.log(result);
-      
+
     }
   }
 
@@ -69,7 +66,7 @@ const SignIn = () => {
       message: message,
       buttons: ["OK"],
       mode: "md",
-      animated:true,
+      animated: true,
       cssClass: 'loginpage-alert',
       color: 'light'
     });
@@ -77,7 +74,7 @@ const SignIn = () => {
 
   const router = useIonRouter();
 
-  const ClearInputs=() => {
+  const ClearInputs = () => {
     setEmail("");
     setPassword("");
 
@@ -104,18 +101,15 @@ const SignIn = () => {
         presentloading({
           message: 'Loading!...',
           duration: 3000,
-          spinner:"lines-sharp",
+          spinner: "lines-sharp",
         })
-        // setShowLoading(true);
         await signIn(email, password);
-        // setShowLoading(false);
         handleButtonClick("Login successfully");
         ClearInputs();
         dismissloading();
         router.push("/dashboard");
       } catch (e) {
         setError(e.message);
-        // setShowLoading(false);
         handleAlert(e.message);
         dismissloading();
         ClearInputs();
@@ -123,7 +117,7 @@ const SignIn = () => {
     }
   }
 
- 
+
 
 
   return (
@@ -131,58 +125,58 @@ const SignIn = () => {
       <IonContent className="signin-main">
         <IonGrid className="signin-grid">
           <IonRow className="signin-image">
-        <IonImg src="/assets/images/img2.jpg">
-        </IonImg>
-        </IonRow>
-        <IonRow className="signin-head">Signin</IonRow>
-        <IonRow className="signin-email">
-          <IonInput
-            className="signin-input-email"
-            type="text"
-            value={email}
-            placeholder="Please Enter Email"
-            onIonChange={(e) => setEmail(e.detail.value)}
-          ></IonInput>
+            <IonImg src="/assets/images/img2.jpg">
+            </IonImg>
+          </IonRow>
+          <IonRow className="signin-head">Signin</IonRow>
+          <IonRow className="signin-email">
+            <IonInput
+              className="signin-input-email"
+              type="text"
+              value={email}
+              placeholder="Please Enter Email"
+              onIonChange={(e) => setEmail(e.detail.value)}
+            ></IonInput>
           </IonRow>
           <IonRow className="signin-password">
-          <IonInput 
-          className="signin-input-password"
-          type="password"
-          value={password}
-            placeholder="Please Enter Password"
-            onIonChange={(e) => setPassword(e.detail.value)}
-          ></IonInput>
-        </IonRow>
-        <IonRow className="login-btn-main">
-        <IonButton
-        className="login-btn"
-          color="light-green"
-          onClick={handleSubmit}
-        >
-          LogIn
-        </IonButton>
-        </IonRow>
-        <IonRow className="text-signin">
-        <IonLabel >Don't have an Acoount? &nbsp;</IonLabel>
-        <IonButton fill="clear" onClick={ClearInputs} routerLink="/signup" className="signup-link">
-          Sign Up
-        </IonButton>
-        </IonRow>
-        <IonRow className="or-signin">
-        <IonLabel >OR</IonLabel>
-        </IonRow>
-        
-        <IonRow className="icons-signin">
-          <IonIcon id="signin-fb-icon"
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoFacebook}
-          />
-          <IonIcon id="signin-g-icon"
-           onClick={signInGoogle}
-            style={{ fontSize: "20px", color: "primary" }}
-            icon={logoGoogle}
-          />
-        </IonRow>
+            <IonInput
+              className="signin-input-password"
+              type="password"
+              value={password}
+              placeholder="Please Enter Password"
+              onIonChange={(e) => setPassword(e.detail.value)}
+            ></IonInput>
+          </IonRow>
+          <IonRow className="login-btn-main">
+            <IonButton
+              className="login-btn"
+              color="light-green"
+              onClick={handleSubmit}
+            >
+              LogIn
+            </IonButton>
+          </IonRow>
+          <IonRow className="text-signin">
+            <IonLabel >Don't have an Acoount? &nbsp;</IonLabel>
+            <IonButton fill="clear" onClick={ClearInputs} routerLink="/signup" className="signup-link">
+              Sign Up
+            </IonButton>
+          </IonRow>
+          <IonRow className="or-signin">
+            <IonLabel >OR</IonLabel>
+          </IonRow>
+
+          <IonRow className="icons-signin">
+            <IonIcon id="signin-fb-icon"
+              style={{ fontSize: "20px", color: "primary" }}
+              icon={logoFacebook}
+            />
+            <IonIcon id="signin-g-icon"
+              onClick={signInGoogle}
+              style={{ fontSize: "20px", color: "primary" }}
+              icon={logoGoogle}
+            />
+          </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>

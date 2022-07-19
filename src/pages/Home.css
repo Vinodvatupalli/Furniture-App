@@ -1,12 +1,14 @@
-.home-content{
+.home-content {
   height: 100%;
- 
+
   --background: linear-gradient(#d3d0d0, #E5E5E5);
 }
-.img{
-  width :50px;
+
+.img {
+  width: 50px;
 }
-.home-grid{
+
+.home-grid {
   height: 100vh;
   padding: 7%;
   display: flex;
@@ -15,7 +17,8 @@
   align-items: center; */
   justify-content: space-around;
 }
-.logo-img{
+
+.logo-img {
   display: flex;
   width: 7px;
   height: 7vh;
@@ -25,15 +28,15 @@
 
 
 
-.app-name{
-   font-style:normal;
-   font-size: 22px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   font-weight: 600;
-   margin-top: 5px;
+.app-name {
+  font-style: normal;
+  font-size: 22px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  margin-top: 5px;
 }
 
-.logo-app-name{
+.logo-app-name {
   display: flex;
   flex-direction: row;
   --background: linear-gradient(#ffffff, #ffffff);
@@ -59,13 +62,13 @@
   /* margin-top: 30px; */
 }
 
-.main-started-btn{
+.main-started-btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sub-content{
+.sub-content {
   display: flex;
   justify-content: center;
   align-items: center;

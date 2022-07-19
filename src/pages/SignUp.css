@@ -4,11 +4,12 @@
     height: 100%;
 
 }
-.signup-grid{
+
+.signup-grid {
     height: 100vh;
 }
 
-.signup-img-main{
+.signup-img-main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,8 +17,8 @@
 
 
 .signup-head {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
     color: #1E3C1E;
     font-family: 'Noto Serif';
     font-style: normal;
@@ -25,52 +26,55 @@
     font-size: 32px;
     padding-top: 20px;
     padding-bottom: 30px;
-    
+
 }
 
 .signup-name {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     border-radius: 10px;
     background: #F8F8F8;
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 10px;
-    
-    
+
+
 
 }
-.signup-input-name{
-     font-family: 'Noto Serif'; 
+
+.signup-input-name {
+    font-family: 'Noto Serif';
 }
 
 .signup-email {
-   
+
     display: flex;
-   justify-content: center;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
     background: #F8F8F8;
     border-radius: 10px;
-   
+
     font-family: 'Noto Serif';
-    
+
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 10px;
 }
-.signup-input-email{
-    font-family: 'Noto Serif'; 
+
+.signup-input-email {
+    font-family: 'Noto Serif';
 }
+
 .signup-password {
-   
+
     display: flex;
-   justify-content: center;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
     background: #F8F8F8;
     border-radius: 10px;
-  
+
     font-family: 'Noto Serif';
 
     margin-left: 40px;
@@ -78,33 +82,34 @@
     margin-bottom: 20px;
 
 }
-.signup-input-password{
-    font-family: 'Noto Serif'; 
+
+.signup-input-password {
+    font-family: 'Noto Serif';
 }
 
 .register-btn {
-    
+
     font-family: 'Noto Serif';
     font-weight: 200px;
     margin-top: 8px;
     margin-bottom: 15px;
 }
 
-.register-btn-main{
+.register-btn-main {
     display: flex;
-   justify-content: center;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.text{
-    
-    display: flex!important;
-   justify-content: center!important;
-   align-items: center!important;
-   /* justify-items: center; */
+.text {
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /* justify-items: center; */
     font-family: 'Noto Serief';
-    margin-top:-10px;
+    margin-top: -10px;
 }
 
 .signin-link {
@@ -112,7 +117,7 @@
     font-size: 12px;
     font-family: 'Noto Serief';
     border-radius: 10px;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .or-signup {
@@ -124,16 +129,15 @@
     color: #1E3C1E;
 }
 
-.icons-signup{
-   margin-top: 20px;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   
+.icons-signup {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
 
-#fb-icon{
+#fb-icon {
     margin-right: 30px;
 }
-

@@ -35,14 +35,12 @@ import {
   logOut,
 } from "ionicons/icons";
 import './SignIn';
-import './Chairs'; 
+import './Chairs';
 import '../Tabs/Account';
 
 import "./Dashboard.css";
-// import { auth } from "../pages/firebaseConfig";
 import { UserAuth } from "../context/AuthContext";
-// import {toastController} from "@ionic/core";
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RouterLink } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 
@@ -50,39 +48,25 @@ import { IonReactRouter } from "@ionic/react-router";
 const Dashboard = () => {
   let router = useIonRouter();
 
-  const {logout}= UserAuth();
+  const { logout } = UserAuth();
 
   const handleBack = () => {
     router.push("/signin");
   };
 
-  // const handleBack = () => {
-  //   router.push("/chairs");
-  // }
-
-  // const handleToast = async(message) => {
-  //   const toast = await toastController.create({
-  //     color: "tertiary",
-  //     position: "bottom",
-  //     duration: 3000,
-  //     message: message,
-  //     showCloseButton: true,
-  //   });
-  //   await toast.present();
-  // };
-  const handleLogout = async() => {
-    try{
+  const handleLogout = async () => {
+    try {
       await logout();
       router.push('/signin');
       window.location.reload();
     }
-    catch(e){
-     console.log(e.message);
+    catch (e) {
+      console.log(e.message);
     }
   }
-    
-  
-  
+
+
+
   return (
     <IonPage>
       <IonContent class="content-dashboard">
@@ -99,7 +83,7 @@ const Dashboard = () => {
 
         <IonGrid className="dashboard-grid">
           <IonRow className="dashboard-intro">
-            Discover the Best Furniture 
+            Discover the Best Furniture
           </IonRow>
           <IonRow>
             <IonSearchbar
@@ -130,12 +114,12 @@ const Dashboard = () => {
                   className="card-img1"
                   src="/assets/images/img4.webp"
                 ></IonImg>
-                </IonCard>
+              </IonCard>
               <IonLabel className="cardimag1-name">
                 William Solid Wood <br /></IonLabel>
-                <IonLabel className="cardimag1-name"> ₹ 17,999</IonLabel>
-              
-              
+              <IonLabel className="cardimag1-name"> ₹ 17,999</IonLabel>
+
+
             </IonCol>
 
             <IonCol>
@@ -144,12 +128,12 @@ const Dashboard = () => {
                   className="card-img2"
                   src="/assets/images/img5.webp"
                 ></IonImg>
-               </IonCard>
+              </IonCard>
               <IonLabel className="cardimag2-name">
-                Dining Chair <br/></IonLabel>
-               <IonLabel className="cardimag2-name">₹ 12,070</IonLabel>   
-              
-             
+                Dining Chair <br /></IonLabel>
+              <IonLabel className="cardimag2-name">₹ 12,070</IonLabel>
+
+
             </IonCol>
           </IonRow>
 
@@ -160,12 +144,12 @@ const Dashboard = () => {
                   className="card-img3"
                   src="/assets/images/img6.webp"
                 ></IonImg>
-             </IonCard>
+              </IonCard>
               <IonLabel className="cardimag3-name">
                 Leather Chair <br />
                 <IonLabel className="cardimag3-name">₹ 10,050</IonLabel>
               </IonLabel>
-              
+
             </IonCol>
 
             <IonCol>
@@ -176,55 +160,55 @@ const Dashboard = () => {
                 ></IonImg>
               </IonCard>
               <IonLabel className="cardimag4-name">
-                Sofa <br/>
+                Sofa <br />
                 <IonLabel className="cardimag4-name"> ₹ 13,090</IonLabel>
               </IonLabel>
-             
+
             </IonCol>
           </IonRow>
 
           <IonRow className="logout-btn" >
-          <IonButton color="light-green" onClick={handleLogout}>LogOut</IonButton>
+            <IonButton color="light-green" onClick={handleLogout}>LogOut</IonButton>
 
-        </IonRow> 
+          </IonRow>
 
         </IonGrid>
 
-        </IonContent>
-        
-          
-        <IonTabBar >
-          <IonTabButton tab="Menu" href="/Menu">
-            <IonIcon icon={menu} />
-            <IonLabel>Menu</IonLabel>
-          </IonTabButton>
+      </IonContent>
 
-          <IonTabButton tab="Cart">
-            <IonIcon icon={cart} />
-            <IonLabel>Cart</IonLabel>
-          </IonTabButton>
 
-          <IonTabButton tab="Home">
-            <IonIcon icon={home} />
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
+      <IonTabBar >
+        <IonTabButton tab="Menu" href="/Menu">
+          <IonIcon icon={menu} />
+          <IonLabel>Menu</IonLabel>
+        </IonTabButton>
 
-          <IonTabButton tab="Search">
-            <IonIcon icon={search} />
-            <IonLabel>Search</IonLabel>
-          </IonTabButton>
+        <IonTabButton tab="Cart">
+          <IonIcon icon={cart} />
+          <IonLabel>Cart</IonLabel>
+        </IonTabButton>
 
-          <IonTabButton tab="Account" href="/Account">
-            <IonIcon icon={personCircleOutline} />
-            <IonLabel>Account</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-        
-     
+        <IonTabButton tab="Home">
+          <IonIcon icon={home} />
+          <IonLabel>Home</IonLabel>
+        </IonTabButton>
+
+        <IonTabButton tab="Search">
+          <IonIcon icon={search} />
+          <IonLabel>Search</IonLabel>
+        </IonTabButton>
+
+        <IonTabButton tab="Account" href="/Account">
+          <IonIcon icon={personCircleOutline} />
+          <IonLabel>Account</IonLabel>
+        </IonTabButton>
+      </IonTabBar>
+
+
     </IonPage>
   );
-  
- };
+
+};
 
 
 

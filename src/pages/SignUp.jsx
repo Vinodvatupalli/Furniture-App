@@ -28,10 +28,9 @@ import { Link } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
-  const [present]= useIonToast();
+  const [present] = useIonToast();
   async function handleButtonClick(message) {
-    // const toast = await toastController.create({
-      present({
+    present({
       color: "light-green",
       position: "top",
       duration: 3000,
@@ -39,7 +38,7 @@ const SignUp = () => {
       showCloseButton: true,
       icon: alert
     });
-    // await toast.present();
+    
   }
 
   const [name, setName] = useState("");
@@ -47,13 +46,12 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { createUser, currentUser } = UserAuth();
-  // const [showLoading, setShowLoading] = useState(false);
   const [presentloading, dismissloading] = useIonLoading();
   const [presentAlert] = useIonAlert();
 
   let router = useIonRouter();
 
-  const ClearInputs=() => {
+  const ClearInputs = () => {
     setName("");
     setEmail("");
     setPassword("");
@@ -93,82 +91,76 @@ const SignUp = () => {
         presentloading({
           message: 'Loading!...',
           duration: 3000,
-          spinner:"lines-sharp",
+          spinner: "lines-sharp",
         })
 
-        // setShowLoading(true);
         await createUser(email, password);
-        // setShowLoading(false);
         handleButtonClick("user registered successfully");
         ClearInputs();
         dismissloading();
         router.push("/signin");
-        
+
       } catch (e) {
         setError(e.message);
-        // setShowLoading(false);
         handleAlert(e.message);
         dismissloading();
         ClearInputs();
       }
     }
-   
-    }
-  //   if(showLoading){
-  //     return <IonLoading isOpen/>
-  // };
 
+  }
+  
   return (
     <IonPage>
       <IonContent className="signup-main">
         <IonGrid className="signup-grid">
-        <IonRow className="signup-img-main">
-        <IonImg className="signup-image" src="/assets/images/img2.jpg"></IonImg>
-        </IonRow>
-        <IonRow className="signup-head">Signup</IonRow>
-        <IonRow className="signup-name">
-          <IonInput
-            className="signup-input-name"
-            placeholder="Please Enter Name"
-            type="text"
-            value={name}
-            onIonChange={(e) => setName(e.detail.value)}
-          ></IonInput>
+          <IonRow className="signup-img-main">
+            <IonImg className="signup-image" src="/assets/images/img2.jpg"></IonImg>
+          </IonRow>
+          <IonRow className="signup-head">Signup</IonRow>
+          <IonRow className="signup-name">
+            <IonInput
+              className="signup-input-name"
+              placeholder="Please Enter Name"
+              type="text"
+              value={name}
+              onIonChange={(e) => setName(e.detail.value)}
+            ></IonInput>
           </IonRow>
           <IonRow className="signup-email">
-          <IonInput
-            className="signup-input-email"
-            placeholder="Please Enter Email"
-            type="text"
-            value={email}
-            onIonChange={(e) => setEmail(e.detail.value)}
-          ></IonInput>
+            <IonInput
+              className="signup-input-email"
+              placeholder="Please Enter Email"
+              type="text"
+              value={email}
+              onIonChange={(e) => setEmail(e.detail.value)}
+            ></IonInput>
           </IonRow >
           <IonRow className="signup-password">
-          <IonInput
-            className="signup-input-password"
-            placeholder="Please Enter Password"
-            type="password"
-            value={password}
-            onIonChange={(e) => setPassword(e.target.value)}
-          ></IonInput>
-        </IonRow>
-        <IonRow className="register-btn-main">
-        <IonButton
-          className="register-btn"
-          color="light-green"
-          onClick={handleSubmit}
-          
-        >
-          Register
-        </IonButton>
-        </IonRow>
-        <IonRow className="text">
-        <IonLabel >Already have an Account? </IonLabel>
-        <IonButton fill="clear" onClick={ClearInputs} routerLink="/signin"  className="signin-link">
-          Sign In
-        </IonButton>
-        </IonRow>
+            <IonInput
+              className="signup-input-password"
+              placeholder="Please Enter Password"
+              type="password"
+              value={password}
+              onIonChange={(e) => setPassword(e.target.value)}
+            ></IonInput>
+          </IonRow>
+          <IonRow className="register-btn-main">
+            <IonButton
+              className="register-btn"
+              color="light-green"
+              onClick={handleSubmit}
+
+            >
+              Register
+            </IonButton>
+          </IonRow>
+          <IonRow className="text">
+            <IonLabel >Already have an Account? </IonLabel>
+            <IonButton fill="clear" onClick={ClearInputs} routerLink="/signin" className="signin-link">
+              Sign In
+            </IonButton>
+          </IonRow>
 
         </IonGrid>
 

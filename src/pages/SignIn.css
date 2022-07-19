@@ -11,10 +11,10 @@
 .signin-image {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
-.signin-grid{
+.signin-grid {
     height: 100vh;
 }
 
@@ -33,74 +33,81 @@
     padding-bottom: 25px;
 }
 
-.signin-email{
+.signin-email {
     display: flex;
     justify-content: center;
     align-items: center;
-background:#F8F8F8;
-border-radius: 10px;
-font-family: 'Noto Serif';
-margin-bottom: 10px;
-margin-left: 40px;
-margin-right: 40px;
-}
-.signin-input-email{
+    background: #F8F8F8;
+    border-radius: 10px;
     font-family: 'Noto Serif';
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
-.signin-input-password{
+
+.signin-input-email {
     font-family: 'Noto Serif';
 }
 
-.signin-password{
+.signin-input-password {
+    font-family: 'Noto Serif';
+}
+
+.signin-password {
     display: flex;
     justify-content: center;
     align-items: center;
-background:#F8F8F8;
-border-radius: 10px;
-font-family: 'Noto Serif';
-margin-bottom: 20px;
-margin-left: 40px;
-margin-right: 40px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    font-family: 'Noto Serif';
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 
 }
-.login-btn{
+
+.login-btn {
     font-family: 'Noto Serif';
-font-weight: 200px; 
+    font-weight: 200px;
 }
-.login-btn-main{
-   
-display: flex;
+
+.login-btn-main {
+
+    display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
- 
+
 }
 
-.text-signin{
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: 'Noto Serief';
-}
-.signup-link{ 
-    font-family: 'Noto Serief';
-   color: rgb(49, 20, 20);
-   /* padding: 9px 1px 3px 1px; */
-   font-size: 12px;
-   font-family: 'Noto Serief';
-   border-radius: 10px;
-   text-decoration:underline;
-}
-.or-signin{
+.text-signin {
     display: flex;
     justify-content: center;
     align-items: center;
-font-family: 'Noto Serief';
-font-size: 13px;
-color: #1E3C1E;
+    font-family: 'Noto Serief';
 }
-.icons-signin{
+
+.signup-link {
+    font-family: 'Noto Serief';
+    color: rgb(49, 20, 20);
+    /* padding: 9px 1px 3px 1px; */
+    font-size: 12px;
+    font-family: 'Noto Serief';
+    border-radius: 10px;
+    text-decoration: underline;
+}
+
+.or-signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Serief';
+    font-size: 13px;
+    color: #1E3C1E;
+}
+
+.icons-signin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,6 +115,6 @@ color: #1E3C1E;
 
 }
 
-#signin-fb-icon{
+#signin-fb-icon {
     margin-right: 30px;
 }
