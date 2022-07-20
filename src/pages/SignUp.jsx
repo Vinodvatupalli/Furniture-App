@@ -124,31 +124,6 @@ const SignUp = () => {
             onIonChange={(e) => setEmail(e.detail.value)}
           ></IonInput>
           </IonRow >
-          <IonRow className="signup-password">
-          <IonInput
-            className="signup-input-password"
-            placeholder="Please Enter Password"
-            type="password"
-            value={password}
-            onIonChange={(e) => setPassword(e.target.value)}
-          ></IonInput>
-        </IonRow>
-        <IonRow className="register-btn-main">
-        <IonButton
-          className="register-btn"
-          color="light-green"
-          onClick={handleSubmit}
-          
-        >
-          Register
-        </IonButton>
-        </IonRow>
-        <IonRow className="text">
-        <IonLabel >Already have an Account? </IonLabel>
-        <IonButton fill="clear" routerLink="/signin" className="signin-link">
-          Sign In
-        </IonButton>
-        </IonRow>
 
         </IonGrid>
 
