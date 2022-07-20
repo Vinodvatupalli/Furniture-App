@@ -3,27 +3,17 @@ import {
   IonCard,
   IonImg,
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonIcon,
   IonSearchbar,
   IonItem,
   IonTabBar,
   IonTabButton,
   IonLabel,
-  IonAvatar,
   useIonRouter,
   IonGrid,
   IonRow,
-  IonCardContent,
-  IonInfiniteScroll,
-  IonInfiniteScrollContent,
   IonCol,
-  IonTabs,
-  Route,
-  IonRouterOutlet,
 } from "@ionic/react";
 import {
   arrowBack,
@@ -32,7 +22,6 @@ import {
   home,
   search,
   personCircleOutline,
-  logOut,
 } from "ionicons/icons";
 import './SignIn';
 import './Chairs';
@@ -40,9 +29,9 @@ import '../Tabs/Account';
 
 import "./Dashboard.css";
 import { UserAuth } from "../context/AuthContext";
-import { Link } from "react-router-dom";
-import { RouterLink } from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
+// import { Link } from "react-router-dom";
+// import { RouterLink } from "@ionic/react";
+// import { IonReactRouter } from "@ionic/react-router";
 
 
 const Dashboard = () => {

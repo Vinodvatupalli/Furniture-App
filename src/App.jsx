@@ -38,7 +38,7 @@ import "./theme/variables.css";
 import { App as app } from "@capacitor/app";
 import { Browser } from "@capacitor/browser";
 import { useEffect, useState } from "react";
-import { collection, doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { db } from "./pages/firebaseConfig";
 
 
@@ -123,12 +123,10 @@ const App = () => {
 
   useEffect(() => {
     getConfigData();
-    if (isPlatform("android")) {
-      getAppInfo();
-    }
-  }, [0]);
+    checkUpdate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  checkUpdate();
 
   return (
     <>
@@ -158,10 +156,10 @@ const App = () => {
               </Route>
 
               <Route exact path="/menu">
-                <Menu/>
+                <Menu />
               </Route>
               <Route exact path="/account">
-                <Account/>
+                <Account />
               </Route>
             </IonRouterOutlet>
           </IonReactRouter>

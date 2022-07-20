@@ -1,30 +1,20 @@
 import {
   IonButton,
-  IonCard,
   IonContent,
-  IonHeader,
-  IonIcon,
   IonImg,
   IonInput,
   IonLabel,
   IonPage,
   IonRow,
-  IonTitle,
-  IonToolbar,
   useIonRouter,
   IonGrid,
   useIonAlert,
   useIonToast,
-  IonCol,
-  IonLoading,
   useIonLoading
 } from "@ionic/react";
-import React, { useState, useEffect } from "react";
-import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
+import { useState } from "react";
+import { alert } from "ionicons/icons";
 import "./SignUp.css";
-import { auth } from "../pages/firebaseConfig";
-import { toastController, alertController } from "@ionic/core";
-import { Link } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
@@ -44,8 +34,8 @@ const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const { createUser, currentUser } = UserAuth();
+  const [setError] = useState("");
+  const { createUser } = UserAuth();
   const [presentloading, dismissloading] = useIonLoading();
   const [presentAlert] = useIonAlert();
 

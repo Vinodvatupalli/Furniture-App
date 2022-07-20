@@ -1,12 +1,8 @@
 import {
   IonButton,
-  IonCard,
   IonImg,
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonInput,
   IonLabel,
   IonIcon,
@@ -15,23 +11,20 @@ import {
   IonRow,
   useIonToast,
   useIonAlert,
-  IonLoading,
   useIonLoading
 } from "@ionic/react";
-import { alert, logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
+import { alert, logoFacebook, logoGoogle } from "ionicons/icons";
 import "./SignIn.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
-
-import { toastController } from "@ionic/core";
 import { UserAuth } from "../context/AuthContext";
 import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [present, dismiss] = useIonToast();
+  const [setError] = useState("");
+  const [present] = useIonToast();
   const [presentloading, dismissloading] = useIonLoading();
   const [presentAlert] = useIonAlert();
 

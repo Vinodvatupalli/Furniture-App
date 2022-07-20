@@ -1,38 +1,20 @@
 import {
-    IonButton,
     IonCard,
-    IonImg,
     IonContent,
-    IonHeader,
     IonPage,
-    IonTitle,
-    IonToolbar,
     IonIcon,
-    IonSearchbar,
     IonItem,
-    IonTabBar,
-    IonTabButton,
-    IonLabel,
-    IonAvatar,
     useIonRouter,
     IonGrid,
     IonRow,
-    IonCardContent,
     IonInfiniteScroll,
     IonInfiniteScrollContent,
     useIonViewWillEnter,
     IonCol,
-    IonTabs,
     IonText
 } from "@ionic/react";
 import {
     arrowBack,
-    menu,
-    cart,
-    home,
-    search,
-    personCircleOutline,
-    logOut,
 } from "ionicons/icons";
 import { entries } from "../pages/data";
 import { useState } from "react";
