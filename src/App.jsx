@@ -116,12 +116,8 @@ const App = () => {
           handleAlert(msg, title, btn, appVersion);
         }
       }
-      // else {
-      //   const msg = "App is not running on android platform";
-      //   handleToast(msg);
-      // }
     } catch (error) {
-      // handleAlert(error.message);
+      handleAlert(error.message);
     }
   };
 
