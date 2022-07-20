@@ -99,20 +99,6 @@ const SignIn = () => {
   return (
     <IonPage>
       <IonContent className="signin-main">
-        <IonGrid className="signin-grid">
-          <IonRow className="signin-image">
-        <IonImg src="/assets/images/img2.jpg">
-        </IonImg>
-        </IonRow>
-        <IonRow className="signin-head">Signin</IonRow>
-        
-        <IonRow className="text-signin">
-        <IonLabel >Don't have an Acoount? &nbsp;</IonLabel>
-        <IonButton fill="clear" routerLink="/signup" className="signup-link">
-          Sign Up
-        </IonButton>
-        </IonRow>
-        </IonGrid>
       </IonContent>
     </IonPage>
   );
