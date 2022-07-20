@@ -151,7 +151,6 @@ const SignUp = () => {
               Sign In
             </IonButton>
           </IonRow>
-
         </IonGrid>
 
       </IonContent>
