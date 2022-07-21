@@ -38,7 +38,7 @@ const Home = () => {
               color="light-green"
               shape="round"
             >
-              Get Started
+              Get Started with INTERIOR Furniture App
             </IonButton>
           </IonRow>
         </IonGrid>
