@@ -26,13 +26,8 @@ import {
 import './SignIn';
 import './Chairs';
 import '../Tabs/Account';
-
 import "./Dashboard.css";
 import { UserAuth } from "../context/AuthContext";
-// import { Link } from "react-router-dom";
-// import { RouterLink } from "@ionic/react";
-// import { IonReactRouter } from "@ionic/react-router";
-
 
 const Dashboard = () => {
   let router = useIonRouter();
@@ -53,8 +48,6 @@ const Dashboard = () => {
       console.log(e.message);
     }
   }
-
-
 
   return (
     <IonPage>
