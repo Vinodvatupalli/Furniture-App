@@ -100,7 +100,7 @@ const SignIn = () => {
         handleButtonClick("Login successfully");
         ClearInputs();
         dismissloading();
-        router.push("/dashboard");
+        router.push("/tabs","forward");
       } catch (e) {
         setError(e.message);
         handleAlert(e.message);

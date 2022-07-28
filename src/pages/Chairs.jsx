@@ -16,14 +16,16 @@ import {
 import {
     arrowBack,
 } from "ionicons/icons";
+
 import { entries } from "../pages/data";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { LazyLoadImage } from "@dcasia/react-lazy-load-image-component-improved";
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import {db} from "./firebaseConfig";
+import { collection, getDocs, setDoc, doc } from "firebase/firestore";
 
 
-
-import './Dashboard';
+import './Tabs';
 
 
 const Chairs = () => {
@@ -31,13 +33,11 @@ const Chairs = () => {
     let router = useIonRouter();
 
     const handleBack = () => {
-        router.push("/dashboard");
+        router.push("/tabs");
     };
 
     const [alldata, setData] = useState([]);
     const [isInfiniteDisabled, setInfiniteDisabled] = useState(false);
-
-
 
     const pushData = () => {
         const max = alldata.length + 10;
@@ -76,6 +76,25 @@ const Chairs = () => {
         window.location.reload();
     };
 
+    const [products, setProducts] = useState([]);
+    const productRef = collection(db, "categories/${docs.id}/chairs-list");
+
+    useEffect(()=>{
+        let unmounted = false;
+        getDocs(productRef).then((snapshot) =>{
+          const products = [];
+          snapshot.docs.forEach((docs) =>{
+            products.push({...docs.data(), id: docs.id});
+          })
+          if(!unmounted){
+            setProducts(products);
+            console.log(setProducts)
+          }
+        });
+        return () => {
+          unmounted = true;
+        };
+      }, [])
 
     return (
         <IonPage>
@@ -92,7 +111,7 @@ const Chairs = () => {
                 </IonItem>
                 <IonGrid >
                     <IonRow>
-                        {alldata.map((data) => {
+                        {products.map((data) => {
                             return (
                                 <IonCol
                                     key={data.id}
@@ -101,15 +120,18 @@ const Chairs = () => {
                                     sizeSm="4"
                                     sizeMd="3"
                                 >
-                                    <IonCard key={data.id} button className="ion-padding ion-text-center" onClick={() =>
-                                        handleCategory("/tabs/home/" + data.title.toLowerCase())}>
+                                    <IonCard className="ion-padding ion-text-center" button
+                                          onClick={() => {
+                                            //  router.push(`chairs/${data.id}`)
+                                                   }}
+                                        >
 
                                         <IonRow>
                                             <IonCol>
                                                 <LazyLoadImage src={data.image} effect="blur" placeholderSrc={process.env.PUBLIC_URL + "/assets/images/alt img.png"} width="100px" height="100px" style={{ margin: "auto" }} />
                                             </IonCol>
                                             <IonCol>
-                                                <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.product}</IonText></IonRow>
+                                                <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.title}</IonText></IonRow>
                                                 <IonRow><IonText style={{ fontSize: "12px", fontWeight: "bold", margin: "auto" }}>{data.price}</IonText></IonRow>
                                             </IonCol>
                                         </IonRow>

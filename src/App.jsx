@@ -13,8 +13,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
 import Chairs from "./pages/Chairs";
-import Menu from "../src/Tabs/Menu";
-import Account from "../src/Tabs/Account";
+import Tabs from "./pages/Tabs";
 import { AuthContextProvider } from "./context/AuthContext";
 
 /* Core CSS required for Ionic components to work properly */
@@ -130,8 +129,9 @@ const App = () => {
 
   return (
     <>
-      <IonApp>
+     
         <AuthContextProvider>
+        <IonApp>
           <IonReactRouter>
             <IonRouterOutlet>
               <Route exact path="/home">
@@ -150,21 +150,30 @@ const App = () => {
               <Route exact path="/chairs">
                 <Chairs />
               </Route>
+              
+              {/* <Route exact path="/tabs">
+                <Tabs />
+              </Route> */}
+
 
               <Route exact path="/">
                 <Redirect to="/home" />
               </Route>
-
-              <Route exact path="/menu">
-                <Menu />
-              </Route>
-              <Route exact path="/account">
-                <Account />
-              </Route>
+              {/* <Route exact path="/dashboard">
+              <Dashboard />
+            </Route> */}
+               {/* <Route exact path="/tabs">
+              <Redirect to="/tabs/dashboard" />
+            </Route> */}
+               <Route exact path="/tabs">
+              <Tabs/>
+            </Route>
+             
             </IonRouterOutlet>
           </IonReactRouter>
+          </IonApp>
         </AuthContextProvider>
-      </IonApp>
+     
     </>
   );
 };

@@ -1,0 +1,37 @@
+/* .acc-content{
+    
+} */
+.account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Noto Serif';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+}
+/* .acc-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} */
+
+.profile-icon{
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+    margin-bottom: 10px;
+}
+
+.logout-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
